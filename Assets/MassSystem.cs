@@ -8,7 +8,6 @@ public class MassSystem : MonoBehaviour {
 
     void Start() {
         numMasses = transform.childCount;
-
         netForces = new Vector3[numMasses];
     }
 
