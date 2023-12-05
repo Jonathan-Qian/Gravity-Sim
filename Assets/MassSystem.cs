@@ -22,7 +22,7 @@ public class MassSystem : MonoBehaviour {
         float forceMagnitude;
         float forceDistanceRatio;
         
-        Vector3 forceComponents, distanceComponents, netForce1, netForce2;
+        Vector3 forceComponents, distanceComponents;
         Transform mass1, mass2;
         MassData massData1, massData2;
 
