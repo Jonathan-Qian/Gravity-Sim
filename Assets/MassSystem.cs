@@ -48,19 +48,8 @@ public class MassSystem : MonoBehaviour {
 
                 forceComponents = distanceComponents * forceDistanceRatio;
 
-                netForce1 = netForces[i];
-                netForce2 = netForces[j];
-
-                netForce1 += forceComponents;
-
-                netForce2 -= forceComponents;
-
-                netForces[i] = netForce1;
-                netForces[j] = netForce2;
-
-                //Debug.Log(counter + "; " + i + ", " + j + "; distance components: " + distanceComponents + "; force components: " + forceComponents + "; netForce1: " + netForce1 + "; netForce2: " + netForce2);
-
-                //counter++;
+                netForces[i] += forceComponents;
+                netForces[j] -= forceComponents;
             }
         }
     }
