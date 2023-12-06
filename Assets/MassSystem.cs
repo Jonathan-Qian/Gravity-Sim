@@ -17,7 +17,6 @@ public class MassSystem : MonoBehaviour {
     }
 
     private void calculateNetForces() {
-        //int counter = 0;
         float distance;
         float forceMagnitude;
         float forceDistanceRatio;
@@ -27,8 +26,9 @@ public class MassSystem : MonoBehaviour {
         MassData massData1, massData2;
 
         for (int i = 0; i < numMasses; i++) {
+            mass1 = transform.GetChild(i);
+
             for (int j = i + 1; j < numMasses; j++) {
-                mass1 = transform.GetChild(i);
                 mass2 = transform.GetChild(j);
 
                 distanceComponents = mass2.position - mass1.position;
