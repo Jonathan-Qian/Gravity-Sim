@@ -1,10 +1,9 @@
-using System;
 using UnityEngine;
 
 public class MassSystem : MonoBehaviour {
     [SerializeField] private float gravitationalConstant;
     private int numMasses;
-    public Vector3[] netForces;
+    private Vector3[] netForces;
 
     void Start() {
         numMasses = transform.childCount;
@@ -17,10 +16,7 @@ public class MassSystem : MonoBehaviour {
     }
 
     private void calculateNetForces() {
-        float distance;
-        float forceMagnitude;
-        float forceDistanceRatio;
-        
+        float distance, forceMagnitude, forceDistanceRatio;
         Vector3 forceComponents, distanceComponents;
         Transform mass1, mass2;
         MassData massData1, massData2;

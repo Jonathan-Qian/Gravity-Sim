@@ -1,9 +1,8 @@
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class MassData : MonoBehaviour {
     public float mass;
-    private Vector3 velocity;
+    [SerializeField] private Vector3 velocity;
     [SerializeField] private float radius;
 
     void Start() {
