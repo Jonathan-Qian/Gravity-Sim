@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 //This doesn't work properly
 public class DrawPath : MonoBehaviour {
@@ -6,42 +7,32 @@ public class DrawPath : MonoBehaviour {
     private Color c1;
     private Color c2;
     private LineRenderer lineRenderer;
+    private Stack<Vector3> positions;
     private int counter = 0;
-    Vector3[] newPositions;
 
     void Start() {
         c1 = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
-        c2 = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
         lineRenderer = gameObject.AddComponent<LineRenderer>();
         lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
         lineRenderer.widthMultiplier = 100f;
-        lineRenderer.positionCount = maxPoints;
 
-        // A simple 2 color gradient with a fixed alpha of 1.0f.
-        float alpha = 1.0f;
         Gradient gradient = new Gradient();
         gradient.SetKeys(
-            new GradientColorKey[] { new GradientColorKey(c1, 0.0f), new GradientColorKey(c2, 1.0f) },
-            new GradientAlphaKey[] { new GradientAlphaKey(alpha, 0.0f), new GradientAlphaKey(alpha, 1.0f) }
+            new GradientColorKey[] { new GradientColorKey(c1, 0.0f), new GradientColorKey(new Color((int) (c1.r + c1.r * 0.1), (int) (c1.g + c1.g * 0.1), (int) (c1.b + c1.b *0.1)), 1.0f) },
+            new GradientAlphaKey[] { new GradientAlphaKey(1.0f, 0.0f), new GradientAlphaKey(0.5f, 1.0f) }
         );
         lineRenderer.colorGradient = gradient;
+        lineRenderer.positionCount = 0;
 
-        newPositions = new Vector3[lineRenderer.positionCount];
+        positions = new Stack<Vector3>(maxPoints);
     }
     void FixedUpdate() {
         if (counter < maxPoints) {
-            lineRenderer.SetPosition(counter, transform.position);
-        }
-        else {
-            newPositions[0] = transform.position;
-
-            for (int i = 1; i < newPositions.Length; i++) {
-                newPositions[i] = lineRenderer.GetPosition(i - 1);
-            }
-
-            lineRenderer.SetPositions(newPositions);
+            counter++;
+            lineRenderer.positionCount = counter;
         }
 
-        counter++;
+        positions.Push(transform.position);
+        lineRenderer.SetPositions(positions.ToArray());
     }
 }
