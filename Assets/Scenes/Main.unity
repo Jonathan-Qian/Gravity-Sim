@@ -269,7 +269,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5667480109004195273, guid: f968a97dc785b4595b8e93ea83c36fa5, type: 3}
       propertyPath: mass
-      value: 1e+17
+      value: 1e+18
       objectReference: {fileID: 0}
     - target: {fileID: 5667480109004195273, guid: f968a97dc785b4595b8e93ea83c36fa5, type: 3}
       propertyPath: radius
@@ -348,6 +348,10 @@ PrefabInstance:
     - target: {fileID: 5667480109004195273, guid: f968a97dc785b4595b8e93ea83c36fa5, type: 3}
       propertyPath: velocity.x
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5667480109004195273, guid: f968a97dc785b4595b8e93ea83c36fa5, type: 3}
+      propertyPath: velocity.z
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7376918679942197721, guid: f968a97dc785b4595b8e93ea83c36fa5, type: 3}
       propertyPath: m_Name
@@ -485,6 +489,10 @@ PrefabInstance:
       value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 5667480109004195273, guid: f968a97dc785b4595b8e93ea83c36fa5, type: 3}
+      propertyPath: velocity.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5667480109004195273, guid: f968a97dc785b4595b8e93ea83c36fa5, type: 3}
       propertyPath: velocity.z
       value: 70
       objectReference: {fileID: 0}
@@ -550,8 +558,12 @@ PrefabInstance:
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5667480109004195273, guid: f968a97dc785b4595b8e93ea83c36fa5, type: 3}
+      propertyPath: velocity.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5667480109004195273, guid: f968a97dc785b4595b8e93ea83c36fa5, type: 3}
       propertyPath: velocity.y
-      value: 100
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 7376918679942197721, guid: f968a97dc785b4595b8e93ea83c36fa5, type: 3}
       propertyPath: m_Name

@@ -3,7 +3,7 @@ using UnityEngine;
 public class MassData : MonoBehaviour {
     public float mass;
     [SerializeField] private Vector3 velocity;
-    [SerializeField] private float radius;
+    public float radius;
 
     void Start() {
         SetRadius(radius);
