@@ -10,10 +10,11 @@ public class CameraMovement : MonoBehaviour {
     private float currentSpeed;
     
     void Update() {
+        Movement();
+
         if (Input.GetMouseButton(1)) {
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
-            Movement();
             Rotation();
         }
         else {

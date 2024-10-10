@@ -15,6 +15,6 @@ public class Label : MonoBehaviour {
         point = Camera.main.WorldToScreenPoint(gameObject.transform.position + offset);
         rect.x = point.x;
         rect.y = Screen.height - point.y - rect.height; // bottom left corner set to the 3D point
-        GUI.Label(rect, gameObject.name + ": " + Mathf.Round(massData.velocity.magnitude) + " m/s");
+        GUI.Label(rect, gameObject.name + "(" + massData.mass + "kg): " + Mathf.Round(massData.velocity.magnitude) + " m/s");
     }
 }
