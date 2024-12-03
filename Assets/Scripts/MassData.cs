@@ -9,7 +9,11 @@ public class MassData : MonoBehaviour {
         SetRadius(radius);
     }
 
-    public void SetRadius(float radius) {
+    void FixedUpdate() {
+        SetDirection(velocity);
+    }
+
+    private void SetRadius(float radius) {
         transform.localScale = new Vector3(radius, radius, radius);
     }
 
@@ -19,5 +23,9 @@ public class MassData : MonoBehaviour {
 
         velocity += acceleration * fixedDeltaTime;
         transform.position += velocity * fixedDeltaTime;
+    }
+
+    private void SetDirection(Vector3 velocity) {
+        transform.rotation = Quaternion.LookRotation(velocity.normalized);
     }
 }

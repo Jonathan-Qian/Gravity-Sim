@@ -370,6 +370,10 @@ PrefabInstance:
       propertyPath: velocity.z
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 6663369798611849960, guid: f968a97dc785b4595b8e93ea83c36fa5, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 7376918679942197721, guid: f968a97dc785b4595b8e93ea83c36fa5, type: 3}
       propertyPath: m_Name
       value: Mass 1
@@ -586,6 +590,10 @@ PrefabInstance:
       propertyPath: velocity.y
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 6663369798611849960, guid: f968a97dc785b4595b8e93ea83c36fa5, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 7376918679942197721, guid: f968a97dc785b4595b8e93ea83c36fa5, type: 3}
       propertyPath: m_Name
       value: Mass 2
